@@ -105,7 +105,7 @@ widgToolbarItems.push("italic");
 widgToolbarItems.push("hyperlink");
 widgToolbarItems.push("unorderedlist");
 widgToolbarItems.push("orderedlist");
-widgToolbarItems.push("image");
+//widgToolbarItems.push("image");
 widgToolbarItems.push("htmlsource");
 widgToolbarItems.push("blockformat");
 
@@ -984,11 +984,11 @@ function widgToolbar(theEditor)
 				
 				break;
 				
-			case "image":
+			/*case "image":
 				this.addButton(this.theList.id + "ButtonImage", "widgButtonImage", "Insert Image", "image");
 				
 				break;
-				
+			*/	
 			case "htmlsource":
 				this.addButton(this.theList.id + "ButtonHTML", "widgButtonHTML", "HTML Source", "html");
 				
@@ -1240,7 +1240,7 @@ function widgToolbarAction()
 			
 			break;
 			
-		case "image":
+		/*case "image":
 			var theImage = prompt("Enter the location for this image:", "");
 			
 			if (theImage != null && theImage != "")
@@ -1249,10 +1249,10 @@ function widgToolbarAction()
 				var theSelection = null;
 				var theRange = null;
 				
-				/* IE selections */
+				// IE selections 
 				if (theIframe.contentWindow.document.selection)
 				{
-					/* Escape quotes in alt text */
+					// Escape quotes in alt text 
 					theAlt = theAlt.replace(/"/g, "'");
 			
 					theSelection = theIframe.contentWindow.document.selection;
@@ -1262,7 +1262,7 @@ function widgToolbarAction()
 					
 					break;
 				}
-				/* Mozilla selections */
+				// Mozilla selections 
 				else
 				{
 					try
@@ -1290,7 +1290,7 @@ function widgToolbarAction()
 			else
 			{
 				return false;
-			}
+			}*/
 		
 		default:
 			theIframe.contentWindow.document.execCommand(this.action, false, null);
